@@ -1,0 +1,79 @@
+.body {
+    background-color: #f0f2f5;
+    padding-top: 150px;
+
+}
+
+.sombra {  
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 9px 9px 39px #c9c9c9,
+        -9px -9px 39px #ffffff;
+    height: 400px;
+    width: 1300px;
+    padding: 45px;
+    margin: 20px 0 0;
+    align-items: center;
+}
+
+.enlaceCrear{
+    color: #1c1e21;
+    font-weight: normal;
+}
+
+
+.contenedor {
+    margin: 0px 0px 0px 250px;
+    padding: 0px 0px 200px;
+}
+
+.buttonRegistro {
+    background-color: #42b72a;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline;
+    font-size: 24px;
+    margin: 16px 2px;
+
+}
+
+.idiomas{
+    display: flex;
+    flex-grow: center;
+    gap: 10px;
+    list-style: none;
+    font-size: smaller;
+
+}
+
+.idiomas{
+    list-style-type: none;
+}
+
+.idiomas li {
+    padding: 0 10px;
+    font-size: 12px;
+    display: flex;
+    text-align: start;
+}
+
+.extenciones{
+    gap: 10px;
+    font-size: smaller;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 0 auto;
+    padding: auto;
+
+}
+
+.cajaFooter{
+    margin: 0 auto;
+    width: 980px;
+    display: flex;
+    justify-content: center ;
+}
