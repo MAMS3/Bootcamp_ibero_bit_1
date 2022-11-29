@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.miNavBar{ 
+    background-color: aqua;
+    background-image: url(https://www.autonoma.edu.co/sites/default/files/2022-07/Odontolog%C3%ADa.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0;
+}
+
+.estiloOpciones {
+    list-style-type: none;
+}
+
+.estiloOpciones li {
+    display: inline;
+}
+
+#botonSesion{
+    width: 250px;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.estiloOpciones li button,
+#botonSesion {
+    width: 160px; 
+    background: #a0a0a0;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+
+.texto1{
+    text-align: center;
+    margin: 5% 150px;
+}
+
+.imgSlider{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
