@@ -21,5 +21,7 @@ function validarFormulario(){
         mensajeErrorSelect.innerHTML = `error: Seleccione una opcion`
         listaFormulario.classList.add(`border` , `border-danger`)     
     }
+
+    
     
 }
