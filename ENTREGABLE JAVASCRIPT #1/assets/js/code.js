@@ -19,17 +19,37 @@ function numeropareimpar() {
 }
 
 function premio () {
-    let usuario = document.getElementById('dama').value
+    let genero = document.getElementById('genero').value
     let premioCliente = document.getElementById('validarEdad')
     let edad = document.getElementById('edadCliente').value
+    let premio = ""
+    console.log(edad)
     if (edad <= 10){
-        premioCliente.innerHTML = usuario + 'reclame un jugo';
+        if(genero == "mujer"){
+            premio = "pizza hawaina"
+        }else if(genero == "hombre"){
+            premio = "pizza tres carnes"
+        }
+        premioCliente.innerHTML = 'reclame un jugo y ' + premio;
     }else if(edad >= 18){
-        premioCliente.innerHTML = usuario + 'Reclame una cerveza';
+        if(genero == "mujer"){
+            premio = "pizza hawaina"
+        }else if(genero == "hombre"){
+            premio = "pizza tres carnes"
+        }
+        premioCliente.innerHTML =  'Reclame una cerveza y ' + premio;
 
     }else {
         premioCliente = document.getElementById('validarEdad')
-        premioCliente.innerHTML = usuario + 'No aplicas'; 
+        premioCliente.innerHTML ='No aplicas'; 
     }
 }
 
+function tablaMultiplicar(){
+    let n = document.querySelector("#inputMulti").value
+    
+    let ulTabla = document.querySelector("#tabla")
+    for(i = 1;i<=10;i++){
+        ulTabla.innerHTML += `<li>${n} X ${i} = ${n*i}</li>`
+    }
+}

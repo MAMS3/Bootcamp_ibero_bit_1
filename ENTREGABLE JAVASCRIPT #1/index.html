@@ -17,16 +17,17 @@
             <div class="col-6 offset-3">
                 <div>
                     <h1>EJERCICIO PRIMER PUNTO</h1>
-                    <P><b>1. Se necesitan sumar los números del 1 a n, donde n es un número que le pedimos al usuario.</b></P>
+                    <P><b>1. Se necesitan sumar los números del 1 a n, donde n es un número que le pedimos al
+                            usuario.</b></P>
                     <div class="modal-body">
                         <input type="text" class="form-control fs-2 w-25" id="suma-pantalla1">
-                            <br>
+                        <br>
+                        <div>
+                            <button type="button" class="btn btn-outline-dark" onclick="suma1()">VALIDAR</button>
                             <div>
-                                <button type="button" class="btn btn-outline-dark" onclick="suma1()">VALIDAR</button>
-                                <div>
-                                    <b>Su resultado es <span id="resultadoPunto1"></span></b>
-                                </div>
+                                <b>Su resultado es <span id="resultadoPunto1"></span></b>
                             </div>
+                        </div>
                     </div>
 
                     <br>
@@ -37,9 +38,10 @@
                         <input type="text" class="form-control fs-2 w-25" id="par-impar">
                         <br>
                         <div>
-                            <button type="button" class="btn btn-outline-dark" onclick="numeropareimpar()">VALIDAR</button>
+                            <button type="button" class="btn btn-outline-dark"
+                                onclick="numeropareimpar()">VALIDAR</button>
                             <div>
-                                <b id="respuestas" ></b>
+                                <b id="respuestas"></b>
                             </div>
                         </div>
                     </div>
@@ -52,54 +54,60 @@
                             o no un premio por parte del negocio, se tienen las siguientes validaciones:</b>
                     </P>
                     <p>3.1 Si es un niño menor a 10 años, debe ir a reclamar un jugo.</p>
-                    
+
                     <p>3.2 Si es una persona mayor de edad (18 años) debe ir a reclamar una cerveza.</p>
-                    
+
                     <p>3.3 Y si es una mujer, debe reclamar adicionalmente una porción de pizza Hawaiana.</p>
-                    
+
                     <p>3.4 O si es un hombre debe reclamar adicionalmente una porción de pizza tres carnes.</p>
-                    
+
                     <p>3.5 Si no cumple ninguna de las condiciones, se le debe informar que desafortunadamente, no
                         recibe ningún premio.</p>
 
-                        <select class="form-select w-50" aria-label="Default select example">
-                            <option selected>Seleccione una opci&oacuten</option>
-                            <option value="1" id="dama">Mujer</option>
-                            <option value="2" id="caballero">Hombre</option>
-                          </select>
-                        <div class="mb-5 w-25">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="number" class="form-label" id="edadCliente" >
-                        </div>
-                            <button type="button" class="btn btn-outline-dark" onclick="premio()">VALIDAR</button>
-                        </div>
-                        <div>
-                            <b id="validarEdad"></b>
-                        </div>
-
-                    <br>
-
-                    <h2>EJERCICIO QUINTO PUNTO</h2>
-                    <p><b>5.	Se le debe pedir al usuario un número y mostrar la tabla de multiplicar de ese número, adicionalmente, se debe mostrar el total de las multiplicaciones.</b></p>
-                    <div class="modal-body">
-                        <input type="text" class="form-control fs-2 w-25" id="">
-                        <br>
-                        <div class="btn-group" role="group" aria-label="Default button group">
-                            <button type="button" class="btn btn-outline-dark">VALIDAR</button>
-                        </div>
+                    <select class="form-select w-50" id="genero" aria-label="Default select example">
+                        <option selected>Seleccione una opci&oacuten</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                    </select>
+                    <div class="mb-5 w-25">
+                        <label for="exampleFormControlInput1" class="form-label"></label>
+                        <input type="number" class="form-label" id="edadCliente">
                     </div>
+                    <button type="button" class="btn btn-outline-dark" onclick="premio()">VALIDAR</button>
+                </div>
+                <div>
+                    <b id="validarEdad"></b>
+                </div>
 
+                <br>
+
+                <h2>EJERCICIO QUINTO PUNTO</h2>
+                <p><b>5. Se le debe pedir al usuario un número y mostrar la tabla de multiplicar de ese número,
+                        adicionalmente, se debe mostrar el total de las multiplicaciones.</b></p>
+                <div class="modal-body">
+                    <input type="text" class="form-control fs-2 w-25" id="inputMulti"> <input type="text" class="form-control fs-2 w-25 mt-1" id="inputMulti">
                     <br>
+                    <div>
+                        <button type="button" class="btn btn-outline-dark" onclick="tablaMultiplicar()">VALIDAR</button>
+                    </div>
+                    <div>
+                        <h2>Tabla de multiplicar del </h2>
+                        <ul id="tabla"></ul>
+                    </div>
+                </div>
 
-                    <h2>EJERCICIO SEXTO PUNTO</h2>
-                    <p><b>6.	Validar cual es el valor de matrícula (1’000.000) que debe pagar un estudiante, teniendo en cuenta que:</b></p>
-                    <div class="modal-body">
-                        <input type="text" class="form-control fs-2 w-25" id="">
-                        <br>
-                        <div class="btn-group" role="group" aria-label="Default button group">
-                            <button type="button" class="btn btn-outline-dark">VALIDAR</button>
-                        </div>
-                    </div>            
+                <br>
+
+                <h2>EJERCICIO SEXTO PUNTO</h2>
+                <p><b>6. Validar cual es el valor de matrícula (1’000.000) que debe pagar un estudiante, teniendo en
+                        cuenta que:</b></p>
+                <div class="modal-body">
+                    <input type="text" class="form-control fs-2 w-25" id="">
+                    <br>
+                    <div class="btn-group" role="group" aria-label="Default button group">
+                        <button type="button" class="btn btn-outline-dark">VALIDAR</button>
+                    </div>
+                </div>
     </section>
 
 
