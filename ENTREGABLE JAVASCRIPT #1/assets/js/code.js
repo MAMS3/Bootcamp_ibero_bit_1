@@ -46,10 +46,43 @@ function premio () {
 }
 
 function tablaMultiplicar(){
-    let n = document.querySelector("#inputMulti").value
-    
-    let ulTabla = document.querySelector("#tabla")
-    for(i = 1;i<=10;i++){
-        ulTabla.innerHTML += `<li>${n} X ${i} = ${n*i}</li>`
+    let multiplicacionTabla = document.querySelector("#multiplicado").value
+    let multiplicadorMaximo = document.querySelector("#multiplicador").value
+    let listas = document.querySelector("#resultado_quinto_punto")
+    for (let x=1; x <= multiplicadorMaximo; x++){
+        listas.innerHTML += `${x} x ${multiplicacionTabla} = ${x*multiplicacionTabla} <br>`
+    }
+
+}
+
+
+
+function matricula() {
+    let promedioUsuario = document.querySelector("#estudiante").value
+    let totalMatricula = 1000000
+    let descuento = 0
+        //(1000000 x 5 ) / 100
+    if (promedioUsuario < 3) {
+        document.querySelector("#beneficio").innerHTML = `El valor total de su matricula es ${totalMatricula}`
+    } else if (promedioUsuario >= 3 && promedioUsuario <= 4) {
+        // descuento = (totalMatricula * .95)    ---> el valor total de la matricula
+        // descuento = totalMatricula * 0.05    ---> tambien me da el descuento
+        descuento = (totalMatricula * 5) / 100
+        totalMatricula = totalMatricula - descuento
+        document.querySelector("#beneficio").innerHTML = `El valor total de su matricula es ${totalMatricula}`
+    } else {
+        descuento = (totalMatricula * 50) / 100
+        totalMatricula = totalMatricula - descuento
+        document.querySelector("#beneficio").innerHTML = `El valor total de su matricula es ${totalMatricula}`
     }
 }
+
+
+
+
+
+
+
+
+
+    
