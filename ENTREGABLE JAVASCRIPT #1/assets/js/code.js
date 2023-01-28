@@ -55,8 +55,6 @@ function tablaMultiplicar(){
 
 }
 
-
-
 function matricula() {
     let promedioUsuario = document.querySelector("#estudiante").value
     let totalMatricula = 1000000
@@ -76,6 +74,8 @@ function matricula() {
         document.querySelector("#beneficio").innerHTML = `El valor total de su matricula es ${totalMatricula}`
     }
 }
+
+
 
 
 
