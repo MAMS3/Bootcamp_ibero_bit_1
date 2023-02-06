@@ -7,4 +7,4 @@ enero.then(res => res.json())
         console.log(info)
     })
 
-
+    
