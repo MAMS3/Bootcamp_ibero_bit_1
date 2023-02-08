@@ -10,6 +10,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
