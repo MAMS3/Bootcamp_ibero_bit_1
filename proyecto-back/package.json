@@ -1,0 +1,31 @@
+{
+  "name": "proyecto-back",
+  "version": "1.0.0",
+  "description": "proyecto enfocado aprender backend",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAMS3/Bootcamp_ibero_bit_1.git"
+  },
+  "keywords": [
+    "backend",
+    "javascript"
+  ],
+  "author": "Marco Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAMS3/Bootcamp_ibero_bit_1/issues"
+  },
+  "homepage": "https://github.com/MAMS3/Bootcamp_ibero_bit_1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1"
+  }
+}
