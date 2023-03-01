@@ -1,1 +1,55 @@
-<p>crear-producto works!</p>
+<app-nav-bar></app-nav-bar>
+<h1 class="d-flex justify-content-center align-content-center my-5">CREAR PRODUCTOS</h1>
+<section class="container">
+    <h1 class="my-5 text-center">Que producto desea agregar?</h1>
+    <p routerLink="/" class="text-primary pb-2">Regresar al catalogo</p>
+    <form>
+        <div>
+            <select class="form-select mb-3">
+                <option selected>Seleccione el tipo...</option>
+                <option value="1">Vehículo</option>
+                <option value="2">Motocicleta</option>
+              </select>
+        </div>
+        <div>
+            <select class="form-select mb-3">
+                <option selected>Seleccione una marca...</option>
+                <option value="1">Renault</option>
+                <option value="2">Chevrolet</option>
+                <option value="3">Ford</option>
+                <option value="4">Nissan</option>
+                <option value="5">Mercedes Benz</option>
+                <option value="6">Mazda</option>
+                <option value="7">Volkswagen</option>
+                <option value="8">Audi</option>
+                <option value="9">Kia</option>
+                <option value="10">Toyota</option>
+                <option value="11">Hyundai</option>
+                <option value="12">BMW</option>
+                <option value="13">Yamaha</option>
+                <option value="14">KTM</option>
+                <option value="15">Kawasaki</option>
+                <option value="16">Honda</option>
+                <option value="17">Ducati</option>
+                <option value="18">Harley Davidson</option>
+                <option value="19">Suzuki</option>
+              </select>
+        </div>
+        <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="nombre" formControlName="nombre">
+            <label for="nombre">Nombre del producto</label>
+        </div>
+        <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="precio" formControlName="precio">
+            <label for="precio">Precio del producto</label>
+            <span *ngIf="productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched" class="text-danger fw-bold">Digite el precio</span>
+            <span *ngIf="productoForm.get('precio')?.hasError('minlength') && productoForm.get('precio')?.touched" class="text-danger fw-bold">El precio debe de contener mínimo 3 caracteres</span>
+            <span *ngIf="productoForm.get('precio')?.hasError('pattern') && productoForm.get('precio')?.touched" class="text-danger fw-bold">&nbsp;El precio no puede contener letras</span>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Seleccione la imagen para su producto </label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+    </form>
+</section>
+<app-footer></app-footer>

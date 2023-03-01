@@ -13,6 +13,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
+import { MotocicletasComponent } from './components/motocicletas/motocicletas.component';
+import { SliderVComponent } from './components/slider-v/slider-v.component';
+import { SliderMComponent } from './components/slider-m/slider-m.component';
+import { SliderGComponent } from './components/slider-g/slider-g.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { RegistroComponent } from './components/registro/registro.component';
     FooterComponent,
     CatalogoComponent,
     CrearProductoComponent,
-    RegistroComponent
+    RegistroComponent,
+    VehiculosComponent,
+    MotocicletasComponent,
+    SliderVComponent,
+    SliderMComponent,
+    SliderGComponent
   ],
   imports: [
     BrowserModule,
