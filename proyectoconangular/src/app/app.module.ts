@@ -18,6 +18,7 @@ import { MotocicletasComponent } from './components/motocicletas/motocicletas.co
 import { SliderVComponent } from './components/slider-v/slider-v.component';
 import { SliderMComponent } from './components/slider-m/slider-m.component';
 import { SliderGComponent } from './components/slider-g/slider-g.component';
+import {HttpClientModule} from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SliderGComponent } from './components/slider-g/slider-g.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
