@@ -18,7 +18,11 @@ import { MotocicletasComponent } from './components/motocicletas/motocicletas.co
 import { SliderVComponent } from './components/slider-v/slider-v.component';
 import { SliderMComponent } from './components/slider-m/slider-m.component';
 import { SliderGComponent } from './components/slider-g/slider-g.component';
-import {HttpClientModule} from "@angular/common/http"
+import { HttpClientModule} from "@angular/common/http";
+import { GestionProductoComponent } from './components/admin/gestion-producto/gestion-producto.component';
+import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
+import { MenuLateralComponent } from './components/admin/menu-lateral/menu-lateral.component';
+import { ListaVehiculosComponent } from './components/admin/lista-vehiculos/lista-vehiculos.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import {HttpClientModule} from "@angular/common/http"
     MotocicletasComponent,
     SliderVComponent,
     SliderMComponent,
-    SliderGComponent
+    SliderGComponent,
+    GestionProductoComponent,
+    AdminUsersComponent,
+    MenuLateralComponent,
+    ListaVehiculosComponent
   ],
   imports: [
     BrowserModule,

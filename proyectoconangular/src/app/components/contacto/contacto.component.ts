@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { modelContacto } from 'models/modelContacto';
+import { ContactoServiceService } from 'service/contacto-service.service';
+import Swal from 'sweetalert2'
+
 
 
 
@@ -19,7 +23,7 @@ export class ContactoComponent {
         this.formContacto = this.fb.group({
             nombre:['', Validators.required],
             correo:['', [Validators.required, Validators.pattern(this.regexCorreo)]],
-            telefono:['',[Validators.required, Validators.pattern(this.regexNumero), Validators.minLength(4)]],
+            telefono:['',[Validators.required, Validators.pattern(this.regexNumero), Validators.minLength(7)]],
             ciudad:['', Validators.required],
             mensaje:['', Validators.required]
         })

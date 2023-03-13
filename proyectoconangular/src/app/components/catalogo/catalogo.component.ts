@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class CatalogoComponent {
 
+    public urlAssets: string = "assets/img/productos"
+
 }

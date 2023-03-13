@@ -1,4 +1,5 @@
 const modContacto = require("../models/modelContacto")
+
 exports.obtenerContactos = (req, res) => {
     res.send('Consultando todos los contactos')
 }

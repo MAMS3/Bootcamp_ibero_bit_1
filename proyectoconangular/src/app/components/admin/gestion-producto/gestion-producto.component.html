@@ -1,18 +1,22 @@
 <app-nav-bar></app-nav-bar>
+<app-menu-lateral></app-menu-lateral>
+
 <section class="container">
-<h1 class="d-flex justify-content-center align-content-center my-5">CREAR PRODUCTOS</h1>
+    <h1 class="d-flex justify-content-center align-content-center my-5">{{tituloComponente}} CREAR PRODUCTOS</h1>
     <h1 class="my-5 text-center">Que producto desea agregar?</h1>
     <p routerLink="/" class="text-primary pb-2">Regresar al catalogo</p>
-    <form>
+    <form [formGroup]="productoForm" (ngSubmit)="enviarInfo()">
         <div>
-            <select class="form-select mb-3">
+            <select class="form-select mb-3" formControlName="tipo">
                 <option selected>Seleccione el tipo...</option>
                 <option value="1">Vehículo</option>
                 <option value="2">Motocicleta</option>
               </select>
+              <!--<span class="text-danger fw-bold">Escoja el tipo</span>-->
         </div>
+        <br>
         <div>
-            <select class="form-select mb-3">
+            <select class="form-select mb-3" formControlName="marca">
                 <option selected>Seleccione una marca...</option>
                 <option value="1">Renault</option>
                 <option value="2">Chevrolet</option>
@@ -34,24 +38,28 @@
                 <option value="18">Harley Davidson</option>
                 <option value="19">Suzuki</option>
               </select>
+              <!--<span class="text-danger fw-bold">Escoja una marca</span>-->
         </div>
+        <br>
         <div class="form-floating mb-3 ">
             <input type="text" class="form-control" id="nombre" formControlName="nombre">
             <label for="nombre">Nombre del producto</label>
+            <span *ngIf="productoForm.get('nombre')?.hasError('required') && productoForm.get('nombre')?.touched" class="text-danger fw-bold">Escriba el nombre del producto</span>
         </div>
         <div class="form-floating mb-3 ">
             <input type="text" class="form-control" id="precio" formControlName="precio">
             <label for="precio">Precio del producto</label>
             <span *ngIf="productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched" class="text-danger fw-bold">Digite el precio</span>
-            <span *ngIf="productoForm.get('precio')?.hasError('minlength') && productoForm.get('precio')?.touched" class="text-danger fw-bold">El precio debe de contener mínimo 3 caracteres</span>
+            <span *ngIf="productoForm.get('precio')?.hasError('minlength') && productoForm.get('precio')?.touched" class="text-danger fw-bold">El precio debe de contener mínimo 7 caracteres</span><br>
             <span *ngIf="productoForm.get('precio')?.hasError('pattern') && productoForm.get('precio')?.touched" class="text-danger fw-bold">&nbsp;El precio no puede contener letras</span>
         </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Seleccione la imagen para su producto </label>
-            <input class="form-control" type="file" id="formFile">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control"  id="rutaImg" formControlName="rutaImg">
+            <label for="rutaImg">Seleccione la imagen para su producto </label>
+            <span *ngIf="productoForm.get('rutaImg')?.hasError('required') && productoForm.get('rutaImg')?.touched" class="text-danger fw-bold">Es necesario una imagen para su producto</span>
         </div>
-        <div class="d-flex justify-content-center">
-            <button type="submit">
+        <div class="d-flex justify-content-center my-4">
+            <button [disabled]="productoForm.invalid" type="submit">
                 <span class="button_top">Crear</span>
             </button>
         </div>

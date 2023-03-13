@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
+import { GestionProductoComponent } from './components/admin/gestion-producto/gestion-producto.component';
+import { ListaVehiculosComponent } from './components/admin/lista-vehiculos/lista-vehiculos.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -29,13 +32,16 @@ const routes: Routes = [
     {path:'slider-g', component:SliderGComponent},
     {path:'slider-v', component:SliderVComponent},
     {path:'slider-m', component:SliderMComponent},
+    {path:'admin/productos', component: GestionProductoComponent},
+    {path: 'admin/lista-productos', component:ListaVehiculosComponent},
+    {path:'adminpage', component:AdminUsersComponent },
     {path:'notFound', component:NotFoundComponent},
     {path:'404',component:NotFoundComponent},
     {path:'**', redirectTo: '404', pathMatch:'full'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<app-menu-lateral></app-menu-lateral>
+<section class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Tipo</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Imagen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of listaProductos">
+            <td>
+                <img src="{{producto.rutaImg}}" class="w-25" alt="">
+            </td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.precio }}</td>
+          </tr>
+        </tbody>
+      </table>
+</section>
+
+<br>
+<br>
+<br>
+<app-footer></app-footer>
