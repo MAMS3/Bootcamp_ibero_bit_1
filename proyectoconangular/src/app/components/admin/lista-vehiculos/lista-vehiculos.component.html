@@ -1,23 +1,36 @@
 <app-nav-bar></app-nav-bar>
 <app-menu-lateral></app-menu-lateral>
 <section class="container">
+    <div class="d-flex justify-content-end mb-3">
+        <button type="button" class="btn btn-dark" routerLink="/admin/productos">Crear Producto</button>
+    </div>
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">Tipo</th>
-            <th scope="col">Marca</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Imagen</th>
+            <th scope="col" class="text-center">Tipo</th>
+            <th scope="col" class="text-center">Marca</th>
+            <th scope="col" class="text-center">Nombre</th>
+            <th scope="col" class="text-center">Precio</th>
+            <th scope="col" class="text-center">Imagen</th>
+            <th scope="col" class="text-center">Acciones</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let producto of listaProductos">
             <td>
-                <img src="{{producto.rutaImg}}" class="w-25" alt="">
+                <img src="{{producto.rutaImg}}" class="w-50" alt="">
             </td>
-            <td>{{ producto.nombre }}</td>
-            <td>{{ producto.precio }}</td>
+            <td><h5>{{ producto.nombre }}</h5></td>
+            <td><h5>{{ producto.precio | currency:'$ '}}</h5></td>
+
+            <td>
+                    <button class="btn btn-info mx-3" [routerLink]="['/admin/editar-producto', producto._id]">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn btn-danger mx-3" (click)="eliminarProducto(producto._id)">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+            </td>
           </tr>
         </tbody>
       </table>

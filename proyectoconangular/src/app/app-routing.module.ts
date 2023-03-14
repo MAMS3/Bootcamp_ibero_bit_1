@@ -33,6 +33,7 @@ const routes: Routes = [
     {path:'slider-v', component:SliderVComponent},
     {path:'slider-m', component:SliderMComponent},
     {path:'admin/productos', component: GestionProductoComponent},
+    {path:'admin/editar-producto/:id', component: GestionProductoComponent},
     {path: 'admin/lista-productos', component:ListaVehiculosComponent},
     {path:'adminpage', component:AdminUsersComponent },
     {path:'notFound', component:NotFoundComponent},

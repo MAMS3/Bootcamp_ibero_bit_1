@@ -2,9 +2,9 @@
 <app-menu-lateral></app-menu-lateral>
 
 <section class="container">
-    <h1 class="d-flex justify-content-center align-content-center my-5">{{tituloComponente}} CREAR PRODUCTOS</h1>
+    <h1 class="d-flex justify-content-center align-content-center my-5">{{tituloComponente}} Productos</h1>
     <h1 class="my-5 text-center">Que producto desea agregar?</h1>
-    <p routerLink="/" class="text-primary pb-2">Regresar al catalogo</p>
+    <p routerLink="/admin/lista-productos" class="text-primary pb-2">Regresar al listado de productos</p>
     <form [formGroup]="productoForm" (ngSubmit)="enviarInfo()">
         <div>
             <select class="form-select mb-3" formControlName="tipo">
