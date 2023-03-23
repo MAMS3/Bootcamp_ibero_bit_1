@@ -11,7 +11,7 @@ router.put('/actualizar-contactos', contactoController.actualizarContacto)
 router.delete('/borrar-contactos', contactoController.eliminarContacto)
 
 //RUTA DE PRODUCTOS
-router.post('/crear-producto', productoController.crearProducto)
+router.post('/crear-producto', productoController.crearProducto) 
 router.get('/productos', productoController.obtenerProductos)
 router.delete('/eliminar-producto/:id', productoController.eliminarProducto)
 router.get('/productos/:id', productoController.obtenerProducto)
@@ -19,3 +19,4 @@ router.put('/actualizar-producto/:id', productoController.actualizarProducto)
 
 module.exports = router
 
+//router.post('/crear-producto', productoController.crearProducto) 

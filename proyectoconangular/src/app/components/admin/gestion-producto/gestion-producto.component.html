@@ -4,7 +4,7 @@
 <section class="container">
     <h1 class="d-flex justify-content-center align-content-center my-5">{{tituloComponente}} Productos</h1>
     <h1 class="my-5 text-center">Que producto desea agregar?</h1>
-    <p routerLink="/admin/lista-productos" class="text-primary pb-2">Regresar al listado de productos</p>
+    <a routerLink="/admin/lista-productos" class="text-primary pb-5">Regresar al listado de productos</a>
     <form [formGroup]="productoForm" (ngSubmit)="enviarInfo()">
         <div>
             <select class="form-select mb-3" formControlName="tipo">

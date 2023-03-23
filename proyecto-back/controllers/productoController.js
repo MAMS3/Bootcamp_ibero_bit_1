@@ -9,7 +9,7 @@ exports.crearProducto = async (req, res) => {
         res.send(producto)
     } catch (error) {
         console.log(error)
-        res.status(500).send('Algo pasa al momento de guardar el producto')
+        res.status(500).send('Algo pasa al momento de crear el producto')
     }
 }
 
